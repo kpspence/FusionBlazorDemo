@@ -1,0 +1,26 @@
+﻿@page "/"
+
+@inherits Pages.IndexModel
+
+@*Following RAZOR Tutorial here  https://www.fusioncharts.com/dev/fusioncharts-aspnet-visualization/getting-started/fusioncharts-net-using-razor*@
+
+    <h1>Fusion Charts Razor App On Blazor</h1>
+
+    Issues:
+<li>Can't compile FusionCharts wrapper in .net standard 2.0 or 2.1</li>
+<li>Can't introduce raw html script into page and execute.  Scripts must be loaded into main index.html page in wwwroot and can be called from razor page using js interop.</li>
+
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>ColumnChart</title>
+    </head>
+
+    <body>
+        <form method="post">
+            <div>@((MarkupString) ChartJson)</div>
+            <br />
+        </form>
+    </body>
+    </html>
